@@ -23,7 +23,6 @@ if [ -z "${MOUNT_CHECK}" ] ; then
 
   # Reduced the information in just one line. It overwrites the default text.
   echo -e "Eficode Academy Network MultiTool (with NGINX) - ${HOSTNAME} - ${CONTAINER_IP} - HTTP: ${HTTP_PORT:-80} , HTTPS: ${HTTPS_PORT:-443}" | tee  ${WEB_ROOT}/index.html 
-  cat /root/press-release.html  >>   ${WEB_ROOT}/index.html
 else
   echo "The directory ${WEB_ROOT} is a volume mount."
   echo "Therefore, will not over-write index.html"
