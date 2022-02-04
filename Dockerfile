@@ -7,11 +7,11 @@ EXPOSE 80 443 1180 11443
 # Install some tools in the container and generate self-signed SSL certificates.
 # Packages are listed in alphabetical order, for ease of readability and ease of maintenance.
 RUN     apk update \
-    &&  apk add bash bind-tools busybox-extras curl \
-                iproute2 iputils jq mtr \
-                net-tools nginx openssl \
-                perl-net-telnet procps tcpdump tcptraceroute wget \
-    &&  mkdir /certs /docker \
+    &&  apk add apache2-utils bash bind-tools busybox-extras curl ethtool git \
+                iperf3 iproute2 iputils jq lftp mtr mysql-client \
+                netcat-openbsd net-tools nginx nmap nmap-scripts openssh-client openssl \
+                perl-net-telnet postgresql-client procps rsync socat tcpdump tshark wget \
+    &&  mkdir /certs \
     &&  chmod 700 /certs \
     &&  openssl req \
         -x509 -newkey rsa:2048 -nodes -days 3650 \
