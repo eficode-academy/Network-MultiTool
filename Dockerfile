@@ -1,6 +1,6 @@
-FROM alpine:3.13
+FROM alpine:3.18
 
-MAINTAINER Kamran Azeem & Henrik Høegh (kamranazeem@gmail.com, henrikrhoegh@gmail.com)
+MAINTAINER Sofus Albertsen
 
 EXPOSE 80 443 1180 11443
 
